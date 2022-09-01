@@ -1,0 +1,109 @@
+/*includes css styling for nav, footer, primary colors/fonts*/
+@import url("styles.css");
+
+main {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='700' preserveAspectRatio='none' viewBox='0 0 1440 700'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1001%26quot%3b)' fill='none'%3e%3crect width='1440' height='700' x='0' y='0' fill='rgba(255%2c 255%2c 255%2c 1)'%3e%3c/rect%3e%3cpath d='M 0%2c511 C 96%2c470.2 288%2c306.8 480%2c307 C 672%2c307.2 768%2c531.8 960%2c512 C 1152%2c492.2 1344%2c268.8 1440%2c208L1440 700L0 700z' fill='rgba(54%2c 144%2c 252%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1001'%3e%3crect width='1440' height='700' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.contact_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: black;
+    text-align: center;
+}
+
+.contact_section h1 {
+    font-size: 40px;
+}
+
+.contact_section div {
+    margin: 30px;
+}
+
+.form {
+    max-width: 600px;
+    height: auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    border: 2px black solid;
+}
+
+.form h1 {
+    margin-bottom: 10px;
+}
+
+.input-field {
+    width: 100%;
+    height: 40px;
+    color: #000;
+    border: 1px solid black;
+    border-radius: 10px;
+    outline: none;
+    margin-bottom: 20px;
+    padding: 15px;
+    color: black;
+    background-color: transparent;
+}
+
+input:focus {
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 0 5px #719ECE;
+}
+
+::placeholder {
+    color:  #696969;
+    font-size: 20px;
+}
+
+input:not(:placeholder-shown) {
+    font-size: 20px;
+}
+
+.text-area {
+    height: 300px;
+}
+
+[type="submit"] {
+    width: 50%;
+    height: 50px;
+    color: black;
+    text-transform: uppercase;
+    font-size: 24px;
+    border: 3px solid black;
+    background: transparent;
+    transition: .4s;
+    border-radius: 20px;
+}
+
+[type="submit"]:hover {
+    cursor: pointer;
+    border: 2px solid black;
+    color: white;
+    background-color: black;
+}
+
+iframe {
+    padding: 20px;
+}
+
+@media (max-width: 1200px) {
+    
+    .contact_section {
+        flex-direction: column;
+    }
+}
+
+
+@media(max-width: 576px) {
+    iframe {
+        width: 100vw;
+        height: 40vh;
+    }
+}

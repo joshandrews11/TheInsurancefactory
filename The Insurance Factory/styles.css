@@ -1,0 +1,215 @@
+/*
+    This CSS is only for the universal properties for the site
+    & the footer and navigation for each page*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  :root {
+    --primary-color: #3690fc;
+    --primary-font: 'Roboto', sans-serif;
+  }
+
+  html {
+    height: 100%;
+    font-family: var(--primary-font);
+    scroll-behavior: smooth;
+    color: white;
+    font-size: 16px;
+    font-family: var(--primary-font);
+  }
+
+  /*
+  
+    NAVIGATION BAR
+
+  */
+
+  .navbar {
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+  }
+
+
+  .nav-logo {
+    width: 180px;
+    height: 100%;
+    object-fit: contain;
+  }
+
+
+.navbar-links ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+
+.navbar-links li a {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    transition: .4s ease;
+    text-transform: uppercase;
+    font-weight: 500;
+    display: block;
+}
+
+.navbar a:hover {
+  color: var(--primary-color)
+}
+
+
+/*
+
+FOOTER
+
+*/
+
+footer {
+  background: black;
+  width: 100%;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+
+
+.footer_logo {
+  width: 200px;
+  object-fit: contain;
+}
+
+.contact_container {
+  display: flex;
+}
+
+.address_info,
+.contact_info {
+  line-height: 1.7;
+  padding: 0px 30px;
+}
+
+.address_info h5,
+.contact_info h5 {
+  font-size: 20px;
+  color: var(--primary-color);
+  padding-bottom: 16px;
+}
+
+.contact_info a {
+  text-decoration: none;
+  color: white;
+}
+
+.fa {
+  font-size: 0px;
+  padding-top: 10px;
+  padding-right: 8px;
+}
+
+.contact_info a:hover,
+.fa:hover {
+  color: var(--primary-color);
+  transition: .2s;
+  cursor: pointer;
+}
+
+.quick_links {
+  list-style: none;
+  font-size: 20px;
+  text-decoration: none;
+  display: flex;
+}
+
+.quick_links a {
+  text-decoration: none;
+  padding: 0px 10px;
+  color: white;
+  transition: .3s ease;
+}
+
+.quick_links a:hover {
+  color: var(--primary-color);
+}
+
+
+.copyright {
+  width: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.copyright_mark {
+  color: var(--primary-color);
+}
+
+
+
+@media (max-width: 967px) {
+  /*brings adddress 7 contact closer together in footer*/
+  .address_info,
+  .contact_info {
+    padding: 0px 10px;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column-reverse;
+  }
+
+  .contact_container {
+    text-align: center;
+    padding: 30px;
+  }
+}
+
+
+@media (max-width: 568px) {
+  .nav-logo {
+    width: 120px;
+  }
+
+  .navbar-links ul {
+    gap: 20px;
+  }
+
+  .navbar-links li a{
+   font-size: 18px; 
+  }
+
+   /*stacks contact info on top one another*/
+   .contact_container {
+    flex-direction: column;
+  }
+
+   /*decrease padding bewteen headers & conatc info*/
+   .address_info h5,
+   .contact_info h5 {
+     padding-bottom: 4px;
+   }
+ 
+   /*padding between contact div & address div*/
+   .contact_info {
+     padding-top: 30px ;
+   }
+
+}
